@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>
+				Títulos
+			</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background-color: #ddd;
+				font-family: 'Arial';
+			}
+			.nav_tabs{
+				width: 800px;
+				height: 900px;
+				margin: 100px auto;
+				background-color: #fff;
+				position: relative;
+			}
+			.nav_tabs ul{
+				list-style: none;
+			}
+			.nav_tabs ul li{
+				float: left;
+			}
+			.nav_tabs label{
+				width: 140px;
+				padding: 10px;
+				background-color: #364e43;
+				display: block;
+				color: #fff;
+				cursor: pointer;
+				text-align: center;
+			}
+			.rd_tabs:checked ~ label{
+				background-color: #e54e55
+			}
+			.rd_tabs{
+				display: none;
+			}
+			.content{
+				border-top: 5px solid #e54e55;
+				background-color: #fff;
+				display: none;
+				position: absolute;
+				height: 400px;
+				width: 800px;
+				left: 0;
+			}
+			.rd_tabs:checked ~ .content{
+				display: block;
+			}
+			.bg{
+				background-image: url("fundo.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				background-attachment: fixed;
+			}
+		</style>
+	</head>
+	<body class="bg">
+		<h1>Categorias</h1>
+		<nav class= "nav_tabs">
+			<ul>
+				<li>
+					<input type="radio" name="tabs" class="rd_tabs" id="tab1"
+					checked>
+					<label for="tab1"> Romance
+					</label>
+					<div class="content">	
+					<article>
+						<ul>
+							<li>
+								<img src="roman1.jpg" width="300" height="200"> <a href="dom_casmurro.html" target="_blank">Dom Casmurro</a> de Machado de Assis
+
+							</li>
+							<li>
+								<img src="roman2.jpg" width="300" height="200"> <a href="sol_da_meia_noite.html" target="_blank"> Sol da Meia Noite</a> de Stephenie Meyer
+							</li>
+							<li>
+								<img src="roman3.jpg" width="300" height="200"><a href="obsidiana.html" target="_blank"> Obsidiana</a> de Jennifer L. Armentrout
+							</li>
+							<li>
+								<img src="roman4.jpg" width="300" height="200"><a href="um_estranho_perfeito.html" target="_blank"> Um Estranho Perfeito</a> de Susan Fox
+							</li>
+						</ul>
+					</article>					
+					</div>
+				</li>
+				<li>
+					<input type="radio" name="tabs" class="rd_tabs" id="tab2">
+					<label for="tab2"> Crônicas
+					</label>
+					<div class="content">
+					<article>
+						<ul>
+							<li>
+								<img src="cronica1.jpg" width="300" height="200"> <a href="textos_crueis.html" target="_blank">Textos cruéis demais para serem lidos rapidamente</a> de Igor Pires e Gabriela Barreira
+
+
+							</li>
+							<li>
+								<img src="cronica2.jpg" width="300" height="200"> <a href="o_melhor_das_comedias.html" target="_blank"> O melhor das comédias da vida privada</a> de Luis Fernando Verissimo
+							</li>
+							<li>
+								<img src="cronica3.jpg" width="300" height="200"><a href="a_traicao.html" target="_blank"> A traição das elegantes</a> de Rubem Braga 
+							</li>
+							<li>
+								<img src="cronica4.jpg" width="300" height="200"><a href="o_homem_nu.html" target="_blank"> O homem nu</a> de Fernando Sabino
+							</li>
+						</ul>
+					</article>						
+					</div>
+				</li>
+				<li>
+					<input type="radio" name="tabs" class="rd_tabs" id="tab3">
+					<label for="tab3"> História
+					</label>
+					<div class="content">
+					<article>
+						
+					</article>						
+					</div>
+				</li>
+				<li>
+					<input type="radio" name="tabs" class="rd_tabs" id="tab4">
+					<label for="tab4"> Mistério
+					</label>
+					<div class="content">
+					<article>
+						
+					</article>						
+					</div>
+				</li>
+				<li>
+					<input type="radio" name="tabs" class="rd_tabs" id="tab5">
+					<label for="tab5"> Ficção
+					</label>
+					<div class="content">
+					<article>
+						
+					</article>						
+					</div>
+				</li>
+				<li>
+					<input type="radio" name="tabs" class="rd_tabs" id="tab6">
+					<label for="tab6"> HQ's
+					</label>
+					<div class="content">	
+					<article>
+						
+					</article>					
+					</div>
+				</li>
+				
+			</ul>
+		</nav>
+	</body>
+</html>
