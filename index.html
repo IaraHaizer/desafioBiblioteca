@@ -24,7 +24,7 @@
 			h2{
 				background-color: #87CEFA;
 				padding: 10px;
-				text-align: left;
+				text-align: center;
 				margin: 1%;
 			}
 			div{
@@ -38,11 +38,41 @@
 			button{
 				background-color: #4169E1;
 			}
+			.compras img {
+			    height: 60px;
+      			width: 60px;
+     			line-height: 10px;
+			}
+			.compras {
+      			font-size: 16px;
+      			padding-right: 35px;
+      			text-align: right;
+      			width: 150px;
+      			height: 25px;
+      			position: relative;
+      			float: right;
+      			bottom: 25px;
+      			clear: right;
+			}
+			.compras ol li {
+			    display: inline;
+			    text-align: center;
+			    list-style-type: none;
+			}
+			.carrinho {
+			      position: absolute;
+			      bottom: 5px;
+			}
+			.compras a {
+			      text-decoraton: none;
+			}
+			.cabeloja {
+			      left: 150px;
+			}
 		</style>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		
 		<header>
 			<img src="livro_capa.jpg" alt="ilustração de um livro_capa" width="100%" height="300">
 			<h1 id="title">
@@ -81,22 +111,22 @@
 				As melhores opções para você se aventurar, aprender, se apaixonar e deixar a imaginação rolar...<br>
 				Permita-se envolver nesse mundo mágico!
 			</p>
+						
+			</div>
+
 			<nav class="cabecalho">
-				<div class="cabeloja">
-      		<ul>
-				</div>
-            	<div class="compras">
-                 	<a href="carrinho.html" target="_blank">
-                    	<ol>                              
-                    		<li>
-                    		Meu carrinho
-                    		</li>
-                        	<li><img class="carrinho" src="carrinho.jpg" width="150" height="150">
-                        	</li>
-                    	</ol>
-                  	</a>
-            	</div>
-      		</ul>
+<div class="cabeloja">
+      <ul>
+</div>
+            <div class="compras">
+                  <a href="carrinho.html" target="_blank">
+                        <ol> 
+                         <li>Minhas compras</li>
+                              <li><img class="carrinho" src="carrinho.jpg"></li>
+                        </ol>
+                  </a>
+            </div>
+      </ul>
 			<header>
 				<h2 class="subtitle">
 					PROMOÇÕES
@@ -182,7 +212,7 @@
 					Tel:(31)99999-9999
 				</li>
 				<li>
-					E-mail: nossalivraria@sac.com
+					E-mail: sac@nossalivraria.com
 				</li>
 			</ul>
 		</footer>
