@@ -1,92 +1,105 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+	<meta charset="utf-8">
 		<title>
 			Nossa Livraria
 		</title>
-		<style >
+	<style type="text/css">
 		*{
-				margin: 0%;
-				padding: 0%;
+			margin: 0;
+			padding: 0;
+		}
+		.menu{
+			width: 100%;
+			height: 66px;
+			background-color: #87CEFA; 
+			font-family: "arial"
+		}
+		.menu ul{
+			list-style: none;
+			position: relative;
+		}
+		.menu ul li{
+			width: 150px;
+			float: left;
+		}
+		.menu a{
+			padding: 15px;
+			display: block;
+			text-decoration: none;
+			text-align: center;  
+			background-color: #87CEFA 
+		}
+		.menu ul ul{
+			position: absolute;
+			visibility: hidden;
+		}
+		.menu ul li:hover ul{
+			visibility: visible;
+		}
+		.menu a:hover{
+			background-color: #f4f4f4;
+		}
+		.menu ul ul li{
+			float: none;
+			border-bottom: solid 1px #ccc;
+		}
+		.menu ul ul li a{
+			background-color: #068;
+		}
+		label[for="bt_menu"]{
+			padding: 5px;
+			background-color: #87CEFA;
+			color: #000000	;
+			font-family: "arial";
+			text-align: center;
+			font-size: 30px;
+			cursor: progress;
+			width: 50px;
+			height: 50px;
+		}
+		.card{
+			width: 300px;
+			padding: 10px;
+			float: left;
+		}
+		body{
+			background-color: #CCFFFF;
+
+		}
+		form{
+			text-align: center;
+		}
+
+		@media(max-width: 800px){
+			.menu ul li{
+				width: 100%;
+				float: none;
 			}
-			body{
-				background-color: #ddd;
-				font-family: 'arial';
-				text-align: center;
-			}
-			h1{
-				background-color: #87CEFA;
-				padding: 10px;
-				text-align: center;
-				margin: 1%;
-			}
-			h2{
-				background-color: #87CEFA;
-				padding: 10px;
-				text-align: center;
-				margin: 1%;
+			.menu ul ul{
+				position: static;
+				overflow: hidden;
+				max-height: 0;
+				transition: all;
 			}
 
-			div{
-				margin: 5px;
-				text-align: center;
-			}
-			p{
-				margin: 5px;
-				text-align: center;
-			}
-			button{
-				background-color: #4169E1;
-			}
-			.compras img {
-			    height: 65px;
-      			width: 65px;
-     			line-height: 100px;
-			}
-			.compras {
-      			font-size: 16px;
-      			padding-right: 65px;
-      			text-align: right;
-      			width: 150px;
-      			height: 25px;
-      			position: relative;
-      			float: right;
-      			bottom: 25px;
-      			clear: right;
-			}
-			.compras ol li {
-			    display: inline;
-			    text-align: center;
-			    list-style-type: none;
-			}
-			.carrinho {
-			      position: absolute;
-			      bottom: 5px;
-			}
-			.compras a {
-			      text-decoraton: none;
-			}
-			.cabeloja {
-			      left: 150px;
-			}
-		</style>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		}
+
+
+	</style>
 	</head>
 	<body>
 		<header>
 			<img src="livro_capa.jpg" alt="ilustração de um livro_capa" width="100%" height="300">
-			<h1 id="title">
-				Nossa Livraria
-			</h1>	
 		</header>
-		<form>
+			<form>
 			<h4>
-				Faça login para aproveitar todas as promoções!
+				Faça login para aproveitar todas as promoções!<br>
 			</h4>	
  	<div class="form-group">
   	  	<label for="exampleInputEmail1">
-  	  		E-mail
+  	  		<br>E-mail
   	 	 </label>
    		 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
     		<small id="emailHelp" class="form-text text-muted">
@@ -101,46 +114,67 @@
  	<div class="form-group form-check">
     	<input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">
-    Salvar Informações
+    	<br>Salvar Informações
 	</label>
   	</div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
-		<section>
-			<p class="p1">
-				Seja bem vindo a nossa Livraria! <br>
-				As melhores opções para você se aventurar, aprender, se apaixonar e deixar a imaginação rolar...<br>
-				Permita-se envolver nesse mundo mágico!
-			</p>
+			<input type="checkbox" id="bt_menu">
+			<label for="bt_menu">&#9776;</label>
+			<nav class="menu">
+				<ul>
+					<li><a href="index.html">Home</a>
+					</li>
+					<li><a href="pesquisa_títulos.html">Categorias</a>
 						
-			</div>
-<br>
-			<nav class="cabecalho">
-<div class="cabeloja">
-      <ul>
-</div>
-            <div class="compras">
-                  <a href="carrinho.html" target="_blank">
-                        <ol> 
-                         <li>Minhas compras</li>
-                              <li><img class="carrinho" src="carrinho.jpg"></li>
-                        </ol>
-                  </a>
-            </div>
-      </ul>
-      <br>
+					</li>
+					<li><a href="" target="_blank">Meus Downloads</a>
+						<ul>
+							<li><a href="" target="_blank">Todos</a>
+							</li>
+							<li><a href="" target="_blank">Pendentes</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="" target="_blank">Minhas compras</a>
+						<ul>
+							<li><a href="" target="_blank">Meu Carrinho</a>
+							</li>
+							<li><a href="" target="_blank">Compras Anteriores</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="" target="_blank">Meu Perfil</a>
+						<ul>
+							<li><a href="" target="_blank">Perfil</a>
+							</li>
+							<li><a href="" target="_blank">Dados de pagamento</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<br>
+			<br>
+			<br>
+			<br>
 			<header>
-				<h2 class="subtitle">
+				<h1 class="subtitle">
 					Promoções
-				</h2>
+				</h1>
 			</header>
+			<br>
+			<br>
+			<br>
+			<br>
 			<div class="card-deck">
   			<div class="card">
-    			<img class="card-img-top" src="hq3.jpg" width="100" height="200" alt="Imagem de capa do card">
+    			<img class="card-img-top" src="hq3.jpg" width="150" height="250" alt="Imagem de capa do card">
     			<div class="card-body">
       				<h5 class="card-title">
       					<a href="o_cavaleiro.html" target="_blank">
-	      					Batman - O cavaleiro das trevas de Frank Miller, Klaus Janson
+	      					Batman - O cavaleiro das trevas <br>
+	      					de Frank Miller, Klaus Janson
       					</a>
       				</h5>
       					<p class="card-text">
@@ -157,11 +191,12 @@
     			</div>
   			</div>
   			<div class="card">
-    			<img class="card-img-top" src="roman1.jpg" width="100" height="200" alt="Imagem de capa do card">
+    			<img class="card-img-top" src="roman1.jpg" width="150" height="250" alt="Imagem de capa do card">
     			<div class="card-body">
       				<h5 class="card-title">
       					<a href="dom_casmurro.html" target="_blank" >
-      						Dom Casmurro de Machado de Assis
+      						Dom Casmurro <br>
+      						de Machado de Assis
       					</a>
       				</h5>
       					<p class="card-text" >
@@ -175,15 +210,15 @@
 							<button type="button" class="btn btn-secondary btn-sm">
 								Digital
 							</button>
-
-      			</div>
+				</div>
   			</div>
   			<div class="card">
-    			<img class="card-img-top" src="ficcao2.jpg" width="100" height="200" alt="Imagem de capa do card">
+    			<img class="card-img-top" src="ficcao2.jpg" width="150" height="250" alt="Imagem de capa do card">
     			<div class="card-body">
       				<h5 class="card-title">
       					<a href="com_sangue.html" target="_blank">
-      						Com sangue de Stephen King
+      						Com sangue <br>
+      						de Stephen King
       					</a>
       				</h5>
       					<p class="card-text">
@@ -200,29 +235,9 @@
     			</div>
  			</div>
 </div>
-			<header>
-				<h2>
-					<a href="pesquisa_títulos.html" target="_blank">
-					Navegue por categoria
-					</a>
-				</h2>
-			</header>
-			
-			<article>
-				<header>
-					Livraria
-				</header>
-			</article>
-		</section>
-		<footer>
-			<ul>
-				<li>
-					Tel:(31)99999-9999
-				</li>
-				<li>
-					E-mail: sac@nossalivraria.com
-				</li>
-			</ul>
-		</footer>
+<br>
+	
+	</body>
+</html>
 	</body>
 </html>
