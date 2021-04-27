@@ -1,2 +1,2 @@
 # DesafioHTML
-Criando uma biblioteca usando HTML e CSS
+Criando uma biblioteca usando HTML e CSS.
